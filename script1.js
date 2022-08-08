@@ -42,7 +42,7 @@ else if (login == 'topAdmin') {
     alert ( 'Hello, Top Admin!' );
 }
   else if (login == 'unauthorizedUser') {
-    alert ( 'Please, check in' );
+    alert ( 'Hello! Please, check in' );
 }
 else if (login == '') {
     alert ( 'Login is empty. Try again' );
@@ -56,7 +56,51 @@ let login = prompt('Please, write login', '');
 let message = (login == 'user') ? 'Hello, user!' :
     (login == 'admin') ? 'Hello, admin!' :
         (login == 'topAdmin') ? 'Hello, Top Admin!' :
-            (login == 'unauthorizedUser') ? 'Please, check in' :
+            (login == 'unauthorizedUser') ? 'Hello! Please, check in' :
             'Try again';
 
 alert( message );
+
+
+let login=prompt ('Please, write login', '');
+switch (login) {
+    case 'user':
+        alert( 'Hello, user!' );
+        break;
+    case 'admin':
+        alert( 'Hello, admin!' );
+        break;
+    case 'topAdmin':
+        alert( 'Hello, Top Admin!' );
+        break;
+    case 'unauthorizedUser':
+        alert( 'Hello! Please, check in' );
+        break;
+    default:
+        alert( 'Try again' );
+}
+
+
+switch (vitamins) {
+    case 'apple':
+    case 'banana':
+    case 'blueberry':
+    case 'cherry':
+    case 'grape':
+    case 'lime':
+        alert( 'fruit' );
+        break;
+
+    case 'tomato':
+    case 'cucumber':
+    case 'onions':
+    case 'carrot':
+    case 'celery':
+    case 'potato':
+    case 'peppers':
+        alert( 'vegetable' );
+        break;
+
+    default:
+        alert( 'This is not fruit or vegetable' );
+}
