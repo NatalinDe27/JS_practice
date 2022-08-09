@@ -1,19 +1,29 @@
+// 1.Variables let and const
+
 let name = 'Nataliia';
 name = 'Hanna';
 const studentName = 'Nataliia';
 
+// 2.Names of Variables
 let userName;
 let topUserName;
 let activeUsersNameList;
 let activeUserName;
 
+// 3. Array, object, string
 let numbers = [1, 255, 378];
 let numbers1 = [466, 285, 9768];
 
-// объект с произвольными ключами и значениями
+let user = {
+    name: "Nataliia",
+    age: 24,
+    country: Ukraine
+};
 
 let world = 'world';
-let str = `Hello ${world}`;
+let string = `Hello ${world}`;
+
+// 4. Math
 
 // 1. 10 < 3                 false
 // 2. ‘hi’ != ‘hello’        true
@@ -32,56 +42,61 @@ let str = `Hello ${world}`;
 // 15. ++13                  14
 
 
-let login=prompt ('Please, write login', '');
-if (login == 'user') {
-    alert ( 'Hello, user!' );
-} else if (login == 'admin') {
-    alert ( 'Hello, admin!' );
+// 16. switch, ?, if.
+
+const isUser = true;
+const isAdmin = true;
+const isTopAdmin = true;
+const isUnauthorizedUser = true;
+if (isUser) {
+    console.log ( 'Hello, user!' );
 }
-else if (login == 'topAdmin') {
-    alert ( 'Hello, Top Admin!' );
+else if (isAdmin) {
+    console.log ( 'Hello, admin!' );
 }
-  else if (login == 'unauthorizedUser') {
-    alert ( 'Hello! Please, check in' );
+else if (isTopAdmin) {
+    console.log ( 'Hello, Top Admin!' );
 }
-else if (login == '') {
-    alert ( 'Login is empty. Try again' );
+else if (isUnauthorizedUser) {
+    console.log ( 'Hello! Please, check in' );
 }
   else {
-    alert ( 'Login is not found. Try again' );
+    console.log ( 'Login is not found. Try again' );
 }
 
 
-let login = prompt('Please, write login', '');
-let message = (login == 'user') ? 'Hello, user!' :
-    (login == 'admin') ? 'Hello, admin!' :
-        (login == 'topAdmin') ? 'Hello, Top Admin!' :
-            (login == 'unauthorizedUser') ? 'Hello! Please, check in' :
+let message = (isUser) ? 'Hello, user!' :
+    (isAdmin) ? 'Hello, admin!' :
+        (isTopAdmin) ? 'Hello, Top Admin!' :
+            (isUnauthorizedUser) ? 'Hello! Please, check in' :
             'Try again';
 
-alert( message );
+console.log( message );
 
 
-let login=prompt ('Please, write login', '');
-switch (login) {
+const switchRole = "admin";
+switch (switchRole) {
     case 'user':
-        alert( 'Hello, user!' );
+        console.log ( 'Hello, user!' );
         break;
     case 'admin':
-        alert( 'Hello, admin!' );
+        console.log( 'Hello, admin!' );
         break;
     case 'topAdmin':
-        alert( 'Hello, Top Admin!' );
+        console.log( 'Hello, Top Admin!' );
         break;
     case 'unauthorizedUser':
-        alert( 'Hello! Please, check in' );
+        console.log( 'Hello! Please, check in' );
         break;
     default:
-        alert( 'Try again' );
+        console.log( 'Try again' );
 }
 
 
-switch (vitamins) {
+// 17. Switch
+const switchFood = "vitamins";
+
+switch (switchFood) {
     case 'apple':
     case 'banana':
     case 'blueberry':
