@@ -11,13 +11,13 @@ let activeUsersNameList;
 let activeUserName;
 
 // 3. Array, object, string
-let numbers = [1, 255, 378];
-let numbers1 = [466, 285, 9768];
+let numbersArray = [1, 255, 378];
+let numbersArray1 = [466, 285, 9768];
 
 let user = {
-    name: "Nataliia",
+    name: 'Nataliia',
     age: 24,
-    country: Ukraine
+    country: 'Ukraine'
 };
 
 let world = 'world';
@@ -30,12 +30,12 @@ let string = `Hello ${world}`;
 // 3. 1 == ‘1’               true
 // 4. null == ‘null’        false
 // 5. null === undefined     false
-// 6. 1 === 1 && ‘hi’         true
-// 7. true && ‘I love js’     true
-// 8. 123 && ‘hi’ || ‘hello’   true
-// 9. 0+ ? true : false         false
+// 6. 1 === 1 && ‘hi’         "hi"
+// 7. true && ‘I love js’     'I love js'
+// 8. 123 && ‘hi’ || ‘hello’   'hi'
+// 9. 0+ ? true : false         NaN
 // 10. 1 + 1                  2
-// 11. '12' + '31'           1231
+// 11. '12' + '31'           '1231'
 // 12. 3 / '3'                1
 // 13. 10 * 'hello'          NaN
 // 14. '13'++                13
