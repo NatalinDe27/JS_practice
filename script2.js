@@ -1,4 +1,4 @@
-const hello = 'Hello world'
+const hello = 'Hello world';
 console.log(
     hello.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
 );
@@ -20,3 +20,22 @@ while (i < 14) {
     }
     ++i;
 }
+
+
+let str = "Nata27aBc";
+let str2 = "";
+for (
+    let i = 0; i < str.length; i++) {
+    let c = str [i];
+    if (c => "0" && c <= "9") {
+        str2 += "Number,";
+    console.log(typeof str2)
+    } else {
+        str2 += "String,";
+        console.log(typeof str2)
+    }
+
+}
+
+
+
