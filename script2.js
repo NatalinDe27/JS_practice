@@ -27,7 +27,7 @@ let str2 = "";
 for (
     let i = 0; i < str.length; i++) {
     let c = str [i];
-    if (c => "0" && c <= "9") {
+    if (c >= "0" && c <= "9") {
         str2 += "Number,";
     console.log(typeof str2)
     } else {
@@ -38,4 +38,19 @@ for (
 }
 
 
+const strForLogging = 'a123B';
+let result = ''
+for(let i = 0; i < strForLogging.length; i++) {
+    let currentSymbol = Number.parseInt(strForLogging[i])
+    if(Number.isNaN(currentSymbol)) {
+        result += 'string, '
+    } else {
+        if(i === strForLogging.length - 1) {
+            result += 'number.'
+        } else {
+            result += 'number, '
+        }
+    }
+}
+console.log(result)
 
