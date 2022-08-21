@@ -56,7 +56,12 @@ const usersArray = [
 
 
 // 3) Вывести общий баланс пользователей
-
+// usersArray.forEach(sumFunc)
+// console.log(arraySum);
+// 8) Вывести массив всех пользователей включая друзей без повторения
+//
+// 9) Вывести массив пользователей у которых баланс больше 2000$
+// 11) Найти пользователей с общими друзьями
 
 // 1) Вывести имя самого богатого пользователя
 
@@ -84,6 +89,15 @@ let usersArray1 = JSON.parse(JSON.stringify(usersArray));
 usersArray1[1] = undefined;
 console.log( usersArray1)
 
+// 6) Добавить пользователя Harry после John
+let usersArrayAdd = JSON.parse(JSON.stringify(usersArray));
+usersArrayAdd.splice(1, 0, ({name: "Harry", balance: '5000$',  friends: [], }));
+console.log (usersArrayAdd)
+
+// 7) Добавить пользователя Conor в конец массива
+let usersArrayAddEnd = JSON.parse(JSON.stringify(usersArray));
+usersArrayAddEnd.push({name: "Conor", balance: '1000$',  friends: [], })
+console.log(usersArrayAddEnd)
 
 
 // 10) Вывести имя самого богатого пользователя(включая друзей)
