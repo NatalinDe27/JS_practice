@@ -52,16 +52,13 @@ const usersArray = [
     },
 ];
 
-// console.log( usersArray[1].friends [1]   );
 
-
-// 3) Вывести общий баланс пользователей
-// usersArray.forEach(sumFunc)
-// console.log(arraySum);
 // 8) Вывести массив всех пользователей включая друзей без повторения
-//
+
 // 9) Вывести массив пользователей у которых баланс больше 2000$
+
 // 11) Найти пользователей с общими друзьями
+
 
 // 1) Вывести имя самого богатого пользователя
 
@@ -70,7 +67,6 @@ const richUser = usersArray.reduce((acc, curr) => {
 });
 console.log (richUser.name)
 
-
 // 2) Отсортировать пользователей по имени в алфавитном порядке
 let usersArraySort = JSON.parse(JSON.stringify(usersArray));
 function sortByName(a, b) {
@@ -78,6 +74,13 @@ function sortByName(a, b) {
 }
 usersArraySort.sort(sortByName);
 console.log(usersArraySort);
+
+// 3) Вывести общий баланс пользователей
+const usersBalanceList = usersArray.map((elem) => +elem.balance.substring(0, elem.balance.length -1));
+const balanceSum = usersBalanceList.reduce((acc, curr) => {
+    return acc += curr
+}, 0)
+console.log(balanceSum);
 
 // 4) Удалить пользователя Russell
 
@@ -100,19 +103,35 @@ usersArrayAddEnd.push({name: "Conor", balance: '1000$',  friends: [], })
 console.log(usersArrayAddEnd)
 
 
+
+
 // 10) Вывести имя самого богатого пользователя(включая друзей)
 const richFriend = usersArray.reduce((acc, curr) => {
     let richFriendInside = acc;
     if(acc.friends?.length) {
         acc.friends.forEach ((friend) => {
             if (friend.balance < curr.balance) {
-                richFriendInside = friend
+                richFriendInside = friend;
             }
         })
     }
-    const friendOrUser = curr.balance < richFriendInside.balance ? richFriendInside : curr
-    return acc.balance < friendOrUser.balance ? friendOrUser: acc
+    const friendOrUser = curr.balance < richFriendInside.balance ? richFriendInside : curr;
+    return acc.balance < friendOrUser.balance ? friendOrUser: acc;
 });
 console.log (richFriend.name)
 
+// 12) Вывести одинаковы ли массивы
 
+const arr1 = [10, 'a', '5', 5, 1];
+const arr2 = [10, 'a', 5, 5, 1];
+let same = arr1.length === arr2.length && arr1.every((value, index) => value === arr2[index])
+console.log(same)
+
+
+// 13) вывести true или false в зависимости является ли строка палиндромом "искать такси", "привет мир"
+
+function palindrome(str) {
+    return str.split('').reverse().join('') == str;
+}
+console.log(palindrome ('искать такси'));
+console.log(palindrome ('привет мир'));
